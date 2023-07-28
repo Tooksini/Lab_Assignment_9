@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // RecordType
 struct RecordType
@@ -9,15 +10,16 @@ struct RecordType
 };
 
 // Fill out this structure
-struct HashType
-{
-
+struct HashType{
+	int size;
+	struct RecordType* table;
 };
 
 // Compute the hash function
-int hash(int x)
-{
+int hash(int x){
+	struct HashType* hashTable;
 
+	return x % hashTable->size;
 }
 
 // parses input file to an integer array
